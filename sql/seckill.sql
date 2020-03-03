@@ -23,19 +23,19 @@ CREATE TABLE seckill(
 insert into
   seckill(name,number,start_time,end_time)
 values
-  ('1000元秒杀iphone6',100,'2016-5-22 00:00:00','2016-5-23 00:00:00'),
-  ('500元秒杀iPad2',200,'2016-5-22 00:00:00','2016-5-23 00:00:00'),
-  ('300元秒杀小米4',300,'2016-5-22 00:00:00','2016-5-23 00:00:00'),
-  ('200元秒杀红米note',400,'2016-5-22 00:00:00','2016-5-23 00:00:00');
+  ('1000元秒杀iphone11',100,'2020-3-3 00:00:00','2020-3-25 00:00:00'),
+  ('500元秒杀iPadPro',200,'2020-3-3 00:00:00','2020-3-25 00:00:00'),
+  ('300元秒杀AirPodsPro',300,'2020-3-3 00:00:00','2020-3-25 00:00:00'),
+  ('200元秒杀华为Mate30Pro',400,'2020-3-3 00:00:00','2020-3-25 00:00:00');
 
 -- 秒杀成功明细表
 -- 用户登录相关信息
-create table success_killed(
+create table seckill_success(
   `seckill_id` BIGINT NOT NULL COMMENT '秒杀商品ID',
-  `user_phone` BIGINT NOT NULL COMMENT '用户手机号',
+  `user_uuid` BIGINT NOT NULL COMMENT '用户手机号',
   `state` TINYINT NOT NULL DEFAULT -1 COMMENT '状态标示:-1无效 0成功 1已付款',
   `create_time` TIMESTAMP NOT NULL COMMENT '创建时间',
-  PRIMARY KEY (seckill_id,user_phone), /*联合主键*/
+  PRIMARY KEY (seckill_id,user_uuid), /*联合主键*/
   KEY idx_create_time(create_time)
 )ENGINE =InnoDB DEFAULT CHARSET =utf8 COMMENT ='秒杀成功明细表';
 

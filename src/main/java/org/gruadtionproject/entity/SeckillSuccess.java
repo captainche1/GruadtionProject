@@ -9,7 +9,7 @@ public class SeckillSuccess {
 
     private long seckillId;
     /* 用户的唯一标识*/
-    private String userUUID;
+    private long userUUID;
     /* 秒杀的状态*/
     private short state;
     /* 创建时间*/
@@ -20,7 +20,7 @@ public class SeckillSuccess {
     public SeckillSuccess() {
     }
 
-    public SeckillSuccess(long seckillId, String userUUID, short state, LocalDateTime createTime, Seckill seckill) {
+    public SeckillSuccess(long seckillId, long userUUID, short state, LocalDateTime createTime, Seckill seckill) {
         this.seckillId = seckillId;
         this.userUUID = userUUID;
         this.state = state;

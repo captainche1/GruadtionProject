@@ -21,7 +21,8 @@ public class Seckill {
     /* 创建的时间 */
     private LocalDateTime createTIme;
 
-    public Seckill(){}
+    public Seckill() {
+    }
 
     public Seckill(long seckillId, String name, int number, LocalDateTime startTime, LocalDateTime endTime, LocalDateTime createTIme) {
         this.seckillId = seckillId;

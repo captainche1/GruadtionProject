@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
-public interface SeckillMapper {
+public interface SeckillDao {
 
     /**
      * 减少库存.
@@ -16,7 +16,7 @@ public interface SeckillMapper {
      * @param killTime  秒杀的精确时间
      * @return 如果秒杀成功就返回1，否则就返回0
      */
-    int ReduceStock(@Param("seckillId") long seckillId, LocalDateTime killTime);
+    int reduceStock(@Param("seckillId") long seckillId, LocalDateTime killTime);
     /**
      * 查询秒杀商品的详情.
      *
